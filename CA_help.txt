@@ -1,0 +1,27 @@
+1.先生成CA的RSA(-aes256表示需要密码保护）
+openssl genrsa -aes256 -out rootca.key 8192
+
+2.创建自签名CA证书ca.crt
+openssl req -sha256 -new -x509 -days 1826 -key rootca.key -out rootca.crt
+Common Name为网站域名
+
+touch certindex
+echo 1000 > certserial
+echo 1000 > crlnumber
+
+3.创建ca.conf文件，
+
+
+4.为nginx web服务器生成ssl证书过程
+cd /etc/nginx/ssl
+openssl genrsa -out nginx.key 4096
+openssl req -new -sha256 -key nginx.key -out nginx.csr
+
+5.将nginx.csr发到CA服务器上，通过第3步生成的ca.conf文件来生成crt证书
+openssl ca -batch -config ca.conf -notext -in nginx.csr -out nginx.crt
+注意 server_name 与证书申请时的 Common Name 要相同
+
+
+//将证书加入linux操作系统
+sudo cp foo.crt /usr/local/share/ca-certificates/foo.crt
+sudo update-ca-certificates

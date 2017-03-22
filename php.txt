@@ -1,0 +1,24 @@
+composer 安装yii2步骤.
+
+//先配置数据源(镜像地址),这个操作会在~/.config/composer/目录下生成一个config.json文件和auth.json文件
+composer config -g repo.packagist composer https://packagist.phpcomposer.com
+
+//然后再将~/.config/composer/config.json复制到composer.json
+//添加"bower-asset/bootstrap": "^3.3.0", 到~/.config/composer/composer.json文件的require中
+cp config.json composer.json
+
+//再安装fxp/composer-asset-plugin
+composer global require "fxp/composer-asset-plugin:^1.2.0"
+
+//还要安装php7-xml拓展, 因为有一个模块要依赖dom，xml拓展包含了dom
+sudo apt install php7.0-xml
+
+//在github生成一个token.   github.com/settings/token
+
+//查看是否安装插件成功
+composer global show
+
+//添加"bower-asset/bootstrap": "^3.3.0"到~/.config/composer/composer.json文件的require中
+
+//然后再创建一个项目模板,完成
+composer create-project --prefer-dist yiisoft/yii2-app-basic basic

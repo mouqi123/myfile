@@ -1,0 +1,13 @@
+# Folder hooks
+folder-hook 'account.com.gmail.mackie' 'source ~/.mutt/account.com.gmail.mackie'
+folder-hook 'account.com.gmail.mutou' 'source ~/.mutt/account.com.gmail.mutou'
+
+# Default account
+source ~/.mutt/account.com.gmail.mackie
+
+# Macros for switching accounts
+macro index <f2> '<sync-mailbox><enter-command>source ~/.mutt/account.com.gmail.mackie<enter><change-folder>!<enter>'
+macro index <f3> '<sync-mailbox><enter-command>source ~/.mutt/account.com.gmail.mutou<enter><change-folder>!<enter>'
+
+# Fetch mail shortcut
+bind index G imap-fetch-mail

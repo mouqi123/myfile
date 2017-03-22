@@ -1,0 +1,23 @@
+set realname = "mackie"
+set from = "mutou151@gmail.com"
+set use_from = yes
+set envelope_from = yes
+
+set smtp_url = "smtps://mutou151@gmail.com@smtp.gmail.com:465/"
+set smtp_pass = "去google邮箱设置一个app专用密码"
+set imap_user = "mutou151@gmail.com"
+set imap_pass = "去google邮箱设置一个app专用密码"
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set ssl_force_tls = yes
+
+# G to get mail
+bind index G imap-fetch-mail
+set editor = "vim"
+unset record
+set move = no
+set charset = "utf-8"
+
+# 设置按照时间降序排列
+set sort_aux = last-date-received                           
+set sort = reverse-threads

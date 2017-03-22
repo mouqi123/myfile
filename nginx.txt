@@ -1,0 +1,31 @@
+sud ufw app list//Nginx registers itself as a service with ufw, our firewall, upon installation. This makes it rather easy to allow Nginx access.
+sudo ufw allow 'Nginx HTTP'
+sudo ufw status
+sudo ufw enable //开启激动防火墙
+
+sudo ufw allow 'Nginx Full'
+sudo ufw ufw delete allow 'Nginx HTTP'
+
+
+Server Configuration
+
+/etc/nginx: The nginx configuration directory. All of the Nginx configuration
+files reside here.
+/etc/nginx/nginx.conf: The main Nginx configuration file. This can be modified
+to make changes to the Nginx global configuraiton.
+/etc/nginx/sites-available: The directory where per-site "server blocks" can
+be stored. Nginx will not use the configuration files found in this directory
+unless they are linked to the sites-enabled directory (see below). Typically,
+all server block configuration is done in this directory, and then enabled by
+linking to the other directory.
+/etc/nginx/sites-enabled/: The directory where enabled per-site "server
+blocks" are stored. Typically, these are created by linking to configuration
+files found in the sites-available directory.
+/etc/nginx/snippets: This directory contains configuration fragments that can
+be included elsewhere in the Nginx configuration. Potentially repeatable
+configuration segments are good candidates for refactoring into snippets.
+Server Logs
+
+/var/log/nginx/access.log: Every request to your web server is recorded in
+this log file unless Nginx is configured to do otherwise.
+/var/log/nginx/error.log: Any Nginx errors will be recorded in this log.

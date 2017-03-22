@@ -1,0 +1,13 @@
+git format-patch -s 1bbe3c8c197a35f79bfddaba099270a2e54ea9c7
+patch -p1 < 0001-Added-liuxingde-test.patch
+
+//sublime配置nodejs开发环境
+`git clone https://github.com/tanepiper/SublimeText-Nodejs $HOME/.config/sublime-text-3/Packages/Nodejs`
+
+//chrome参数设置
+chrome://flags/#allow-insecure-localhost
+
+//shell正则匹配
+cat rrx-debt.log-2017-01-20 | grep "http://100.111.222.29/sms/smsController/sendSms" | grep "成功"| perl -l -n -e'/mobiles=(\d+)/ && print $1' |sort |uniq
+
+echo -e "asdf \nmackie123 \nasdf " | awk '/mackie/ {print $0}'

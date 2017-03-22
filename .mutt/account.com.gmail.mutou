@@ -1,0 +1,23 @@
+set realname = "mutou"
+set from = "mouqi@jiedaibao.com"
+set use_from = yes
+set envelope_from = yes
+
+set smtp_url = "smtps://mouqi@jiedaibao.com@smtp.exmail.qq.com:465/"
+set smtp_pass = ""
+set imap_user = "mouqi@jiedaibao.com"
+set imap_pass = ""
+set folder = "imaps://imap.exmail.qq.com:993"
+set spoolfile = "+INBOX"
+set ssl_force_tls = yes
+
+# G to get mail
+bind index G imap-fetch-mail
+set editor = "vim"
+unset record
+set move = no
+set charset = "utf-8"
+
+# 设置按照时间降序排列
+set sort_aux = last-date-received                           
+set sort = reverse-threads
