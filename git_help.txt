@@ -7,3 +7,17 @@ patch -p1 < 0001-Added-liuxingde-test.patch
 
 //清空暂存，用于修改.gitignore时，有些文件已经提交过
 git rm -r --cached .
+
+//切分支的时候stash
+git stash
+git stash list
+git diff stash@{0}
+git stash apply stash@{0}
+
+//查看git对象
+git show 
+git ls-tree -r -t master
+
+git grep -n ‘log_syslog’ v1.5.3.8 v1.0.0 -- *.c
+
+
