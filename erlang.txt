@@ -1,0 +1,11 @@
+//idea中,先创建erlang项目,然后再创建rebar项目,导入到erlang项目中
+rebar create-app appid=erlangTest
+
+//编译
+erlc 文件名
+//执行
+erl -noshell -s helloworld start -s init stop
+/usr/lib/erlang/bin/erl -pa /home/mackie/git/java/spider/ebin/ -noshell  -eval 'hello:start(), init:stop().'
+
+erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
+
