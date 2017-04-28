@@ -20,4 +20,20 @@ git ls-tree -r -t master
 
 git grep -n ‘log_syslog’ v1.5.3.8 v1.0.0 -- *.c
 
+//补充最后一次提交
+git commit --amend
 
+//merge时冲突撤销
+git reset --hard
+git merge --abort
+git reset --merge
+
+//撤销上一次提交
+git reset HEAD^
+git add .
+git commit -c ORIG_HEAD 
+
+//查询某个文件提交历史
+git blame 文件名字
+//查看某个文件的第100行到110行是谁修改的。。
+git blame +L100,110 文件名字
