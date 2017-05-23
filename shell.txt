@@ -1,1 +1,3 @@
 find . -exec zgrep 703594423518459550 {} +
+
+ps -ef | grep "[p]hp /data/application/accountSync/web/yii" | awk '{print $2}' | xargs kill
