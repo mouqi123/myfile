@@ -37,3 +37,6 @@ git commit -c ORIG_HEAD
 git blame 文件名字
 //查看某个文件的第100行到110行是谁修改的。。
 git blame +L100,110 文件名字
+
+//寻找包含某个tag的分支
+git branch -a --contains <tag>
