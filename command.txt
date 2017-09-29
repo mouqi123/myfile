@@ -15,5 +15,8 @@ echo -e "asdf \nmackie123 \nasdf " | awk '/mackie/ {print $0}'
 //递归替换当前目录下文件中所有的字符串
 find . -type f -print0 | xargs -0 sed -i 's/billing/accountSync/g'
 
+//mac
+grep -rli 'wms-date-core' * | xargs -I@ sed -i '' 's/wms-date-core/moliere-core/g' @
+
 //mybatis自动生成配置文件
 java -jar ~/.m2/repository/org/mybatis/generator/mybatis-generator-core/1.3.5/mybatis-generator-core-1.3.5.jar -configfile src/main/resources/generator-config.xml -overwrite
