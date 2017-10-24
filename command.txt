@@ -20,3 +20,7 @@ grep -rli 'wms-date-core' * | xargs -I@ sed -i '' 's/wms-date-core/moliere-core/
 
 //mybatis自动生成配置文件
 java -jar ~/.m2/repository/org/mybatis/generator/mybatis-generator-core/1.3.5/mybatis-generator-core-1.3.5.jar -configfile src/main/resources/generator-config.xml -overwrite
+
+
+//mybatis-plugin 破解
+https://github.com/myoss/profile/blob/master/idea/plugin/MybatisPlugin/Mybatis-Plugin%E6%8F%92%E4%BB%B6%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.txt
