@@ -8,7 +8,7 @@ patch -p1 < 0001-Added-liuxingde-test.patch
 chrome://flags/#allow-insecure-localhost
 
 //shell正则匹配
-cat rrx-debt.log-2017-01-20 | grep "http://100.111.222.29/sms/smsController/sendSms" | grep "成功"| perl -l -n -e'/mobiles=(\d+)/ && print $1' |sort |uniq
+cat catalina.out |  grep NullPointerE | perl -l -n -e'/WTraceId\[(.+?)\]/ && print $1' |sort |uniq
 
 echo -e "asdf \nmackie123 \nasdf " | awk '/mackie/ {print $0}'
 
