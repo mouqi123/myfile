@@ -24,3 +24,6 @@ docker stop container-id
 //docker registry
 docker login -u docker-registry-username
 docker push docker-registry-username/docker-image-name
+
+https://geekdudes.wordpress.com/2016/10/23/private-docker-registry-in-ubuntu-server-16-04/
+
