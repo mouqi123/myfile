@@ -1,3 +1,7 @@
+https://www.akadia.com/services/ssh_test_certificate.html
+
+
+
 1.先生成CA的RSA(-aes256表示需要密码保护）
 openssl genrsa -aes256 -out rootca.key 8192
 
