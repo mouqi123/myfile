@@ -20,6 +20,8 @@ echo -e "asdf \nmackie123 \nasdf " | awk '/mackie/ {print $0}'
 //递归替换当前目录下文件中所有的字符串
 find . -type f -print0 | xargs -0 sed -i 's/billing/accountSync/g'
 
+find . -name "._*" | xargs -i rm -f {}
+
 //mac
 grep -rli 'wms-date-core' * | xargs -I@ sed -i '' 's/wms-date-core/moliere-core/g' @
 
